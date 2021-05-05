@@ -1,12 +1,15 @@
 'use strict';
 
+require('dotenv').config()
+
 var mongoose = require('mongoose');
 var	app = require('./app');
-var	port = process.env.PORT || 3900;
+var	port = process.env.PORT;
 
-const user = 'admin';
-const password = 'OJIeZQpa4JVOTkbu';
-const dbname = "api-rest-blog"
+const user = process.env.USER;
+const password = process.env.PASSWORD;
+const dbname = process.env.DBNAME;
+
 const uri = `mongodb+srv://${user}:${password}@blog-database.i95md.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
 mongoose.set('useFindAndModify', false); //Para desactivar la forma de trabajar antigua y usar nuevos metodos
