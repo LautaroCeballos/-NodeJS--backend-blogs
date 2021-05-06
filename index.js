@@ -15,14 +15,14 @@ const uri = `mongodb+srv://${user}:${password}@blog-database.i95md.mongodb.net/$
 mongoose.set('useFindAndModify', false); //Para desactivar la forma de trabajar antigua y usar nuevos metodos
 mongoose.Promise = global.Promise;
 //Con promesas
-// mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-// 	.then(() => {
-// 		console.log('La conexion ha sido exitosa');
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+	.then(() => {
+		console.log('La conexion ha sido exitosa');
 
-// 		//Crear servidor y ponerme a escuchar peticiones http
+ 		//Crear servidor y ponerme a escuchar peticiones http
 		app.listen(port, () => {
 			console.log('Servidor corriendo en http://localhost:' + port);
 		});
-// 	}).catch((err) => {
-// 		console.log('error en la conexion', err);
-// 	});
+	}).catch((err) => {
+		console.log('error en la conexion', err);
+	});
