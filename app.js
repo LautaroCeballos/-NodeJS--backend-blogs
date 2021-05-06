@@ -28,11 +28,11 @@ app.use((req, res, next) => {
 
 //Añadir prefijos a rutas / Cargar rutas
 
-app.use('/api', article_routes);
+// app.use('/api', article_routes);
 
-/*
+
 // Ruta o metodo de prueba para el API REST
-	app.get('/probando', (req, res) => {
+	app.get('/', (req, res) => {
 		console.log(req.body);
 
 		return res.status(200).send({
@@ -41,7 +41,7 @@ app.use('/api', article_routes);
 			email: 'admin@admin.com'
 		});
 	});
-*/
+
 
 //Exportar modulos (fichero actual)
 
