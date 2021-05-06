@@ -23,4 +23,6 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 		app.listen(port, () => {
 			console.log('Servidor corriendo en http://localhost:' + port);
 		});
+	}).catch((err) => {
+		console.log('error en la conexion', err);
 	});
