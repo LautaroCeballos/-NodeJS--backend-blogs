@@ -13,6 +13,7 @@ router.post('/datos-curso', ArticleController.datosCurso);
 router.get('/test-de-controlador', ArticleController.test);
 
 //Rutas para articulos
+router.get('/', ArticleController.default)
 router.post('/save', ArticleController.save);
 router.get('/articles/:last?', ArticleController.getArticles); //Con el signo de pregunta es un parametro opcional
 router.get('/article/:id', ArticleController.getArticle); //id es un parametro obligatorio

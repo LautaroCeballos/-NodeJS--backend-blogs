@@ -22,6 +22,13 @@ var controller = {
 		});
 	},
 
+	default: (req, res) => {
+		return res.status(200).send({
+			status: 'success',
+			message: 'A la escucha de peticiones'			
+		})
+	},
+
 	//Metodos de utilidad
 	save: (req, res) => {
 		//Recoger parametros por post
