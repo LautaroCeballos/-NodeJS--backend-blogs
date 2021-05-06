@@ -36,9 +36,8 @@ app.use((req, res, next) => {
 		console.log(req.body);
 
 		return res.status(200).send({
-			curso: 'Master en frameworks js',
-			nombre: 'Lautaro Ceballos',
-			email: 'admin@admin.com'
+			status: 'success',
+			message: 'Conexion exitosa. Esperando peticiones'
 		});
 	});
 
