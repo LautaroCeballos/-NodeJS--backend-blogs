@@ -15,7 +15,7 @@ const uri = `mongodb+srv://${user}:${password}@blog-database.i95md.mongodb.net/$
 mongoose.set('useFindAndModify', false); //Para desactivar la forma de trabajar antigua y usar nuevos metodos
 mongoose.Promise = global.Promise;
 //Con promesas
-mongoose.connect(uri, { useNewUrlParser: true })
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(() => {
 		console.log('La conexion ha sido exitosa');
 
